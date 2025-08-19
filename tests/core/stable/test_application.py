@@ -17,14 +17,14 @@ from dataclasses import dataclass
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.async_utils import Timeout
-from parlant.core.application import Application
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.customers import CustomerId, CustomerStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.sessions import EventKind, EventSource, Session, SessionStore
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolResult
+from orionix_ai.core.async_utils import Timeout
+from orionix_ai.core.application import Application
+from orionix_ai.core.agents import AgentId, AgentStore
+from orionix_ai.core.customers import CustomerId, CustomerStore
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.sessions import EventKind, EventSource, Session, SessionStore
+from orionix_ai.core.tags import Tag
+from orionix_ai.core.tools import ToolResult
 
 from tests.test_utilities import create_guideline, nlp_test
 

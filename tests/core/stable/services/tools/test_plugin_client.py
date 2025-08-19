@@ -22,8 +22,8 @@ from pydantic import BaseModel
 from pytest import fixture, raises
 import pytest
 
-from parlant.core.loggers import StdoutLogger
-from parlant.core.tools import (
+from orionix_ai.core.loggers import StdoutLogger
+from orionix_ai.core.tools import (
     ToolContext,
     ToolError,
     ToolParameterOptions,
@@ -31,14 +31,14 @@ from parlant.core.tools import (
     ToolResultError,
     ToolOverlap,
 )
-from parlant.core.services.tools.plugins import PluginServer, tool
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.emission.event_buffer import EventBuffer, EventBufferFactory
-from parlant.core.emissions import EventEmitter, EventEmitterFactory
-from parlant.core.services.tools.plugins import PluginClient
-from parlant.core.sessions import SessionId, EventKind
-from parlant.core.tools import ToolExecutionError
+from orionix_ai.core.services.tools.plugins import PluginServer, tool
+from orionix_ai.core.agents import Agent, AgentId, AgentStore
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.emission.event_buffer import EventBuffer, EventBufferFactory
+from orionix_ai.core.emissions import EventEmitter, EventEmitterFactory
+from orionix_ai.core.services.tools.plugins import PluginClient
+from orionix_ai.core.sessions import SessionId, EventKind
+from orionix_ai.core.tools import ToolExecutionError
 from tests.test_utilities import run_service_server
 
 

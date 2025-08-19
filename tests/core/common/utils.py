@@ -19,14 +19,14 @@ from typing import Optional, cast
 from lagom import Container
 
 
-from parlant.core.common import generate_id, JSONSerializable
-from parlant.core.customers import Customer
-from parlant.core.engines.types import UtteranceRequest
-from parlant.core.journeys import Journey, JourneyNode
-from parlant.core.tools import Tool
-from parlant.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
-from parlant.core.guidelines import Guideline
-from parlant.core.sessions import Event, EventKind, MessageEventData, EventSource, EventId
+from orionix_ai.core.common import generate_id, JSONSerializable
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.engines.types import UtteranceRequest
+from orionix_ai.core.journeys import Journey, JourneyNode
+from orionix_ai.core.tools import Tool
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
+from orionix_ai.core.guidelines import Guideline
+from orionix_ai.core.sessions import Event, EventKind, MessageEventData, EventSource, EventId
 
 from tests.test_utilities import SyncAwaiter
 

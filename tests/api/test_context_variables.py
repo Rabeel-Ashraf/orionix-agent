@@ -17,10 +17,10 @@ import httpx
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import AgentId
-from parlant.core.context_variables import ContextVariableStore
-from parlant.core.tags import Tag, TagId, TagStore
-from parlant.core.tools import LocalToolService, ToolId, ToolOverlap
+from orionix_ai.core.agents import AgentId
+from orionix_ai.core.context_variables import ContextVariableStore
+from orionix_ai.core.tags import Tag, TagId, TagStore
+from orionix_ai.core.tools import LocalToolService, ToolId, ToolOverlap
 
 
 @fixture

@@ -14,12 +14,12 @@
 
 import asyncio
 from fastapi.testclient import TestClient
-from parlant.api.app import ASGIApplication
+from orionix_ai.api.app import ASGIApplication
 from lagom import Container
 import pytest
 
-from parlant.adapters.loggers.websocket import WebSocketLogger
-from parlant.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.adapters.loggers.websocket import WebSocketLogger
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
 
 
 @pytest.fixture

@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from parlant.core.agents import Agent
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.coherence_checker import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     IncoherenceKind,
 )

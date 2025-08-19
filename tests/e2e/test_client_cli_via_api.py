@@ -19,8 +19,8 @@ import tempfile
 from typing import Any, Optional
 import httpx
 
-from parlant.core.services.tools.plugins import tool
-from parlant.core.tools import ToolResult, ToolContext
+from orionix_ai.core.services.tools.plugins import tool
+from orionix_ai.core.tools import ToolResult, ToolContext
 
 from tests.e2e.test_utilities import (
     CLI_CLIENT_PATH,

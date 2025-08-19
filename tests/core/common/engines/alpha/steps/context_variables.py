@@ -14,16 +14,16 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId
-from parlant.core.context_variables import (
+from orionix_ai.core.agents import AgentId
+from orionix_ai.core.context_variables import (
     ContextVariable,
     ContextVariableStore,
     ContextVariableValue,
 )
-from parlant.core.customers import CustomerStore
-from parlant.core.sessions import SessionId, SessionStore
-from parlant.core.tags import Tag, TagStore
-from parlant.core.tools import ToolId
+from orionix_ai.core.customers import CustomerStore
+from orionix_ai.core.sessions import SessionId, SessionStore
+from orionix_ai.core.tags import Tag, TagStore
+from orionix_ai.core.tools import ToolId
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

@@ -14,17 +14,17 @@
 
 from datetime import datetime, timezone
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.entity_cq import EntityQueries
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.glossary import GlossaryStore
-from parlant.core.services.indexing.coherence_checker import (
+from orionix_ai.core.agents import Agent, AgentId
+from orionix_ai.core.entity_cq import EntityQueries
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.glossary import GlossaryStore
+from orionix_ai.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     IncoherenceKind,
     IncoherenceTest,
 )
 
-from parlant.core.tags import Tag
+from orionix_ai.core.tags import Tag
 from tests.core.common.utils import ContextOfTest
 from tests.test_utilities import nlp_test
 

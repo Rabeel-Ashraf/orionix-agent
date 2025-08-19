@@ -16,14 +16,14 @@ from pprint import pformat
 from typing import cast
 from pytest_bdd import given, then, parsers, when
 
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.common import JSONSerializable
-from parlant.core.customers import CustomerStore
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.canned_response_generator import DEFAULT_NO_MATCH_CANREP
-from parlant.core.nlp.moderation import ModerationTag
+from orionix_ai.core.agents import AgentId, AgentStore
+from orionix_ai.core.common import JSONSerializable
+from orionix_ai.core.customers import CustomerStore
+from orionix_ai.core.emissions import EmittedEvent
+from orionix_ai.core.engines.alpha.canned_response_generator import DEFAULT_NO_MATCH_CANREP
+from orionix_ai.core.nlp.moderation import ModerationTag
 
-from parlant.core.sessions import (
+from orionix_ai.core.sessions import (
     EventKind,
     EventSource,
     MessageEventData,

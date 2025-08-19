@@ -14,7 +14,7 @@
 
 from typing import Any
 from pytest_bdd import given, parsers
-from parlant.core.capabilities import CapabilityStore
+from orionix_ai.core.capabilities import CapabilityStore
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest
 

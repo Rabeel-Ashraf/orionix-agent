@@ -15,20 +15,20 @@
 from typing import Any, cast
 from pytest_bdd import given, parsers
 
-from parlant.core.tools import ToolOverlap, ToolParameterOptions
-from parlant.core.relationships import (
+from orionix_ai.core.tools import ToolOverlap, ToolParameterOptions
+from orionix_ai.core.relationships import (
     RelationshipEntityKind,
     RelationshipEntity,
     RelationshipStore,
     RelationshipKind,
 )
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.guideline_tool_associations import (
+from orionix_ai.core.agents import AgentId, AgentStore
+from orionix_ai.core.guideline_tool_associations import (
     GuidelineToolAssociation,
     GuidelineToolAssociationStore,
 )
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tools import LocalToolService, ToolId
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.tools import LocalToolService, ToolId
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

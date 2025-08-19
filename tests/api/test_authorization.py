@@ -16,7 +16,7 @@ import pytest
 from fastapi import Request
 from limits import RateLimitItemPerMinute
 
-from parlant.api.authorization import (
+from orionix_ai.api.authorization import (
     AuthorizationException,
     Operation,
     BasicRateLimiter,

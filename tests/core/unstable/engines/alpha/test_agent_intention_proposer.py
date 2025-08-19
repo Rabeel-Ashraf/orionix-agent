@@ -19,33 +19,33 @@ from typing import Sequence
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import Agent
-from parlant.core.capabilities import Capability, CapabilityId
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.customers import Customer
-from parlant.core.emission.event_buffer import EventBuffer
-from parlant.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.capabilities import Capability, CapabilityId
+from orionix_ai.core.common import JSONSerializable, generate_id
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.emission.event_buffer import EventBuffer
+from orionix_ai.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
     GenericResponseAnalysisBatch,
     GenericResponseAnalysisSchema,
 )
-from parlant.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     GuidelineMatcher,
     ResponseAnalysisContext,
 )
-from parlant.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
-from parlant.core.engines.alpha.optimization_policy import OptimizationPolicy
-from parlant.core.engines.alpha.tool_calling.tool_caller import ToolInsights
-from parlant.core.engines.types import Context
-from parlant.core.entity_cq import EntityCommands
-from parlant.core.evaluations import GuidelinePayload, PayloadOperation
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
-from parlant.core.services.indexing.guideline_agent_intention_proposer import AgentIntentionProposer
-from parlant.core.sessions import (
+from orionix_ai.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
+from orionix_ai.core.engines.alpha.optimization_policy import OptimizationPolicy
+from orionix_ai.core.engines.alpha.tool_calling.tool_caller import ToolInsights
+from orionix_ai.core.engines.types import Context
+from orionix_ai.core.entity_cq import EntityCommands
+from orionix_ai.core.evaluations import GuidelinePayload, PayloadOperation
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
+from orionix_ai.core.services.indexing.guideline_agent_intention_proposer import AgentIntentionProposer
+from orionix_ai.core.sessions import (
     AgentState,
     Event,
     EventSource,

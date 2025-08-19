@@ -15,8 +15,8 @@
 from typing import Any
 from pytest import mark, raises
 
-from parlant.core.tools import ToolContext, ToolError
-from parlant.core.services.tools.openapi import OpenAPIClient
+from orionix_ai.core.tools import ToolContext, ToolError
+from orionix_ai.core.services.tools.openapi import OpenAPIClient
 
 from tests.test_utilities import (
     TOOLS,

@@ -4,11 +4,11 @@ from typing import Mapping, Sequence
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.journeys import Journey, JourneyId, JourneyNodeId
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.services.indexing.relative_action_proposer import (
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from orionix_ai.core.journeys import Journey, JourneyId, JourneyNodeId
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.services.indexing.relative_action_proposer import (
     RelativeActionProposer,
     RelativeActionSchema,
 )

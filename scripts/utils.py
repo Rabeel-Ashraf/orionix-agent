@@ -49,7 +49,7 @@ def get_packages() -> list[Package]:
 
     return [
         Package(
-            name="parlant",
+            name="orionix_ai",
             path=root / ".",
             cmd_prefix="poetry run",
             uses_poetry=True,

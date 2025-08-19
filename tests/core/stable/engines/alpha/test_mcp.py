@@ -17,15 +17,15 @@ from enum import Enum
 import uuid
 from pathlib import Path
 
-from parlant.core.services.tools.mcp_service import MCPToolServer, MCPToolClient
+from orionix_ai.core.services.tools.mcp_service import MCPToolServer, MCPToolClient
 from lagom import Container
-from parlant.core.agents import Agent
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.loggers import StdoutLogger
-from parlant.sdk import ToolContext
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.emissions import EventEmitterFactory
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.loggers import StdoutLogger
+from orionix_ai.sdk import ToolContext
 from tests.test_utilities import SERVER_BASE_URL, get_random_port
-from parlant.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
 
 
 def create_client(

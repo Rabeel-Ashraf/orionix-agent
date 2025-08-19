@@ -20,7 +20,7 @@ TBD
 
 ## [3.0.0] - 2025-08-15
 
-- Please see the announcement at https://parlant.io/blog/parlant-3-0-release
+- Please see the announcement at https://orionix_ai.io/blog/orionix_ai-3-0-release
 
 ## [2.2.0] - 2025-05-20
 
@@ -52,7 +52,7 @@ TBD
 ### Fixed
 
 - Fixed rendering relationships in CLI
-- Fixed parlant client using old imports from python client SDK
+- Fixed orionix_ai client using old imports from python client SDK
 
 ## [2.1.0] - 2025-04-29
 
@@ -181,7 +181,7 @@ TBD
 
 ### Changed
 
-- Change default home dir from runtime-data to parlant-data
+- Change default home dir from runtime-data to orionix_ai-data
 
 ### Fixed
 

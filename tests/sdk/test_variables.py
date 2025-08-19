@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from parlant.core.context_variables import ContextVariableStore
-from parlant.core.tools import ToolId
-import parlant.sdk as p
+from orionix_ai.core.context_variables import ContextVariableStore
+from orionix_ai.core.tools import ToolId
+import orionix_ai.sdk as p
 from tests.sdk.utils import Context, SDKTest
 
 

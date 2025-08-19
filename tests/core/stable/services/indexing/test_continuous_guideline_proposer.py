@@ -15,8 +15,8 @@
 import asyncio
 from lagom import Container
 
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.guideline_continuous_proposer import GuidelineContinuousProposer
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.services.indexing.guideline_continuous_proposer import GuidelineContinuousProposer
 
 
 async def test_that_non_continuous_guidelines_mark_as_non_continuous(

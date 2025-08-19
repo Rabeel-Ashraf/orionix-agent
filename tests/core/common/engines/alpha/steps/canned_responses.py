@@ -14,7 +14,7 @@
 
 import re
 from pytest_bdd import given, parsers
-from parlant.core.canned_responses import CannedResponseStore, CannedResponseId, CannedResponseField
+from orionix_ai.core.canned_responses import CannedResponseStore, CannedResponseId, CannedResponseField
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

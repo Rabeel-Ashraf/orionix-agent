@@ -14,23 +14,23 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId
-from parlant.core.common import JSONSerializable
-from parlant.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
-from parlant.core.entity_cq import EntityCommands
-from parlant.core.evaluations import GuidelinePayload, PayloadOperation
-from parlant.core.relationships import (
+from orionix_ai.core.agents import AgentId
+from orionix_ai.core.common import JSONSerializable
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
+from orionix_ai.core.entity_cq import EntityCommands
+from orionix_ai.core.evaluations import GuidelinePayload, PayloadOperation
+from orionix_ai.core.relationships import (
     RelationshipEntityKind,
     RelationshipKind,
     RelationshipEntity,
     RelationshipStore,
 )
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineStore
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineStore
 
-from parlant.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
-from parlant.core.sessions import AgentState, SessionId, SessionStore, SessionUpdateParams
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolId
+from orionix_ai.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
+from orionix_ai.core.sessions import AgentState, SessionId, SessionStore, SessionUpdateParams
+from orionix_ai.core.tags import Tag
+from orionix_ai.core.tools import ToolId
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest
 

@@ -18,39 +18,39 @@ from typing import cast
 from pytest_bdd import given, when, parsers
 from unittest.mock import AsyncMock
 
-from parlant.core.agents import AgentId, AgentStore, CompositionMode
-from parlant.core.context_variables import (
+from orionix_ai.core.agents import AgentId, AgentStore, CompositionMode
+from orionix_ai.core.context_variables import (
     ContextVariable,
     ContextVariableStore,
     ContextVariableValue,
 )
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.customers import CustomerId, CustomerStore
-from parlant.core.engines.alpha.engine import AlphaEngine
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.customers import CustomerId, CustomerStore
+from orionix_ai.core.engines.alpha.engine import AlphaEngine
+from orionix_ai.core.emissions import EmittedEvent
+from orionix_ai.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
     GenericResponseAnalysisBatch,
     GenericResponseAnalysisSchema,
 )
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     ResponseAnalysisContext,
 )
-from parlant.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
-from parlant.core.engines.alpha.message_generator import MessageGenerator
-from parlant.core.engines.alpha.optimization_policy import OptimizationPolicy
-from parlant.core.engines.alpha.utils import context_variables_to_json
-from parlant.core.engines.alpha.canned_response_generator import (
+from orionix_ai.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
+from orionix_ai.core.engines.alpha.message_generator import MessageGenerator
+from orionix_ai.core.engines.alpha.optimization_policy import OptimizationPolicy
+from orionix_ai.core.engines.alpha.utils import context_variables_to_json
+from orionix_ai.core.engines.alpha.canned_response_generator import (
     CannedResponseGenerator,
 )
-from parlant.core.engines.alpha.message_event_composer import MessageEventComposer
-from parlant.core.engines.alpha.tool_calling.tool_caller import ToolInsights
-from parlant.core.engines.types import Context, UtteranceRationale, UtteranceRequest
-from parlant.core.emission.event_buffer import EventBuffer
-from parlant.core.entity_cq import EntityCommands, EntityQueries
-from parlant.core.glossary import Term
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.sessions import (
+from orionix_ai.core.engines.alpha.message_event_composer import MessageEventComposer
+from orionix_ai.core.engines.alpha.tool_calling.tool_caller import ToolInsights
+from orionix_ai.core.engines.types import Context, UtteranceRationale, UtteranceRequest
+from orionix_ai.core.emission.event_buffer import EventBuffer
+from orionix_ai.core.entity_cq import EntityCommands, EntityQueries
+from orionix_ai.core.glossary import Term
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.sessions import (
     AgentState,
     EventSource,
     SessionId,

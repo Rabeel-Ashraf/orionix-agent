@@ -15,21 +15,21 @@
 import random
 from lagom import Container
 
-from parlant.core.agents import Agent, AgentStore
-from parlant.core.capabilities import CapabilityStore
-from parlant.core.entity_cq import EntityQueries
-from parlant.core.glossary import GlossaryStore
-from parlant.core.journey_guideline_projection import JourneyGuidelineProjection
-from parlant.core.relationships import (
+from orionix_ai.core.agents import Agent, AgentStore
+from orionix_ai.core.capabilities import CapabilityStore
+from orionix_ai.core.entity_cq import EntityQueries
+from orionix_ai.core.glossary import GlossaryStore
+from orionix_ai.core.journey_guideline_projection import JourneyGuidelineProjection
+from orionix_ai.core.relationships import (
     RelationshipEntity,
     RelationshipStore,
     RelationshipKind,
     RelationshipEntityKind,
 )
-from parlant.core.canned_responses import CannedResponseStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.journeys import JourneyStore
-from parlant.core.tags import Tag, TagId, TagStore
+from orionix_ai.core.canned_responses import CannedResponseStore
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.tags import Tag, TagId, TagStore
 
 
 async def test_that_list_guidelines_with_mutual_agent_tag_are_returned(

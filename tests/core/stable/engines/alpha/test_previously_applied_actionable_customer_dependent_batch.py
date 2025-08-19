@@ -17,25 +17,25 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from lagom import Container
 from pytest import fixture
-from parlant.core.agents import Agent
-from parlant.core.capabilities import Capability, CapabilityId
-from parlant.core.common import generate_id
-from parlant.core.customers import Customer
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.guideline_matching.generic.guideline_previously_applied_actionable_customer_dependent_batch import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.capabilities import Capability, CapabilityId
+from orionix_ai.core.common import generate_id
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.emissions import EmittedEvent
+from orionix_ai.core.engines.alpha.guideline_matching.generic.guideline_previously_applied_actionable_customer_dependent_batch import (
     GenericPreviouslyAppliedActionableCustomerDependentGuidelineMatchesSchema,
     GenericPreviouslyAppliedActionableCustomerDependentGuidelineMatchingBatch,
 )
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     GuidelineMatchingContext,
 )
-from parlant.core.engines.alpha.optimization_policy import OptimizationPolicy
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.journeys import Journey
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.sessions import EventSource, Session, SessionId, SessionStore
-from parlant.core.tags import TagId
+from orionix_ai.core.engines.alpha.optimization_policy import OptimizationPolicy
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from orionix_ai.core.journeys import Journey
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.sessions import EventSource, Session, SessionId, SessionStore
+from orionix_ai.core.tags import TagId
 from tests.core.common.utils import create_event_message
 from tests.test_utilities import SyncAwaiter
 

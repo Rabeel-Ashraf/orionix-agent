@@ -19,10 +19,10 @@ from fastapi import status
 from lagom import Container
 from pytest import mark, raises
 
-from parlant.core.journeys import JourneyStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.tags import Tag, TagStore
-from parlant.core.common import ItemNotFoundError
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.tags import Tag, TagStore
+from orionix_ai.core.common import ItemNotFoundError
 
 
 async def test_that_a_journey_can_be_created(

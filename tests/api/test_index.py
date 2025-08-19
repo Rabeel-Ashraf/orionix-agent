@@ -17,11 +17,11 @@ from fastapi import status
 import httpx
 from lagom import Container
 
-from parlant.core.agents import AgentId
-from parlant.core.evaluations import EvaluationStore
-from parlant.core.guidelines import GuidelineStore
+from orionix_ai.core.agents import AgentId
+from orionix_ai.core.evaluations import EvaluationStore
+from orionix_ai.core.guidelines import GuidelineStore
 
-from parlant.core.tags import Tag
+from orionix_ai.core.tags import Tag
 from tests.conftest import NoCachedGenerations
 from tests.core.stable.services.indexing.test_evaluator import (
     AMOUNT_OF_TIME_TO_WAIT_FOR_EVALUATION_TO_START_RUNNING,

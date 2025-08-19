@@ -20,23 +20,23 @@ from unittest.mock import AsyncMock
 
 from pytest import raises
 
-from parlant.core.common import DefaultBaseModel
-from parlant.core.engines.alpha.prompt_builder import (
+from orionix_ai.core.common import DefaultBaseModel
+from orionix_ai.core.engines.alpha.prompt_builder import (
     BuiltInSection,
     PromptBuilder,
     PromptSection,
     SectionStatus,
 )
-from parlant.core.loggers import Logger
-from parlant.core.nlp.embedding import EmbeddingResult
-from parlant.core.nlp.generation import (
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.embedding import EmbeddingResult
+from orionix_ai.core.nlp.generation import (
     FallbackSchematicGenerator,
     SchematicGenerationResult,
     SchematicGenerator,
 )
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.nlp.policies import policy, retry
-from parlant.core.nlp.tokenization import EstimatingTokenizer, ZeroEstimatingTokenizer
+from orionix_ai.core.nlp.generation_info import GenerationInfo, UsageInfo
+from orionix_ai.core.nlp.policies import policy, retry
+from orionix_ai.core.nlp.tokenization import EstimatingTokenizer, ZeroEstimatingTokenizer
 
 
 class DummySchema(DefaultBaseModel):

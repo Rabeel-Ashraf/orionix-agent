@@ -16,8 +16,8 @@ import asyncio
 import os
 import signal
 
-from parlant.core.tools import ToolContext, ToolResult
-from parlant.core.services.tools.plugins import tool
+from orionix_ai.core.tools import ToolContext, ToolResult
+from orionix_ai.core.services.tools.plugins import tool
 
 from tests.e2e.test_utilities import (
     ContextOfTest,

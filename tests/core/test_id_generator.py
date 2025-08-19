@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from parlant.core.common import IdGenerator
+from orionix_ai.core.common import IdGenerator
 
 
 async def test_that_id_generator_generates_different_ids_for_objects_with_similar_small_content() -> (

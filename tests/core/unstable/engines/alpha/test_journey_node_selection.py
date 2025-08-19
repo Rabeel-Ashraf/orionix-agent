@@ -1,13 +1,13 @@
 from lagom import Container
 from pytest import fixture
-from parlant.core.agents import Agent
-from parlant.core.customers import Customer
-from parlant.core.engines.alpha.guideline_matching.generic.journey_node_selection_batch import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.engines.alpha.guideline_matching.generic.journey_node_selection_batch import (
     JourneyNodeSelectionSchema,
 )
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.sessions import EventSource, Session
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.sessions import EventSource, Session
 
 from tests.core.stable.engines.alpha.test_journey_node_selection import (
     ContextOfTest,

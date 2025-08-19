@@ -16,19 +16,19 @@ from collections.abc import Sequence
 from typing import Mapping, cast
 from pytest_bdd import given, parsers
 
-from parlant.core.entity_cq import EntityCommands
-from parlant.core.journeys import Journey, JourneyStore
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineStore
+from orionix_ai.core.entity_cq import EntityCommands
+from orionix_ai.core.journeys import Journey, JourneyStore
+from orionix_ai.core.guidelines import Guideline, GuidelineId, GuidelineStore
 
-from parlant.core.relationships import (
+from orionix_ai.core.relationships import (
     RelationshipEntity,
     RelationshipEntityKind,
     RelationshipKind,
     RelationshipStore,
 )
-from parlant.core.sessions import AgentState, SessionId, SessionStore, SessionUpdateParams
-from parlant.core.tags import Tag
-from parlant.core.tools import LocalToolService, ToolId
+from orionix_ai.core.sessions import AgentState, SessionId, SessionStore, SessionUpdateParams
+from orionix_ai.core.tags import Tag
+from orionix_ai.core.tools import LocalToolService, ToolId
 from tests.core.common.engines.alpha.steps.tools import TOOLS
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

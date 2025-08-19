@@ -19,10 +19,10 @@ from fastapi import status
 import httpx
 from lagom import Container
 
-from parlant.core.services.tools.mcp_service import DEFAULT_MCP_PORT, MCPToolServer
-from parlant.core.services.tools.plugins import tool
-from parlant.core.tools import ToolResult, ToolContext
-from parlant.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.services.tools.mcp_service import DEFAULT_MCP_PORT, MCPToolServer
+from orionix_ai.core.services.tools.plugins import tool
+from orionix_ai.core.tools import ToolResult, ToolContext
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
 
 from tests.test_utilities import (
     SERVER_BASE_URL,

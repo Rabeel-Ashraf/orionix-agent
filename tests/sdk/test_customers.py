@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from parlant.core.customers import CustomerStore
-import parlant.sdk as p
+from orionix_ai.core.customers import CustomerStore
+import orionix_ai.sdk as p
 from tests.sdk.utils import Context, SDKTest
 
 

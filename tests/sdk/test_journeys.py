@@ -14,17 +14,17 @@
 
 import pytest
 
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.journeys import JourneyStore
-from parlant.core.relationships import RelationshipKind, RelationshipStore
-from parlant.core.services.tools.plugins import tool
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolContext, ToolId, ToolResult
-from parlant.core.canned_responses import CannedResponseStore
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.relationships import RelationshipKind, RelationshipStore
+from orionix_ai.core.services.tools.plugins import tool
+from orionix_ai.core.tags import Tag
+from orionix_ai.core.tools import ToolContext, ToolId, ToolResult
+from orionix_ai.core.canned_responses import CannedResponseStore
 from tests.sdk.utils import Context, SDKTest
 from tests.test_utilities import nlp_test
 
-from parlant import sdk as p
+from orionix_ai import sdk as p
 
 
 class Test_that_journey_can_be_created_without_conditions(SDKTest):

@@ -18,9 +18,9 @@ from fastapi import status
 import httpx
 
 
-from parlant.core.services.tools.plugins import tool
-from parlant.core.tools import ToolResult, ToolContext
-from parlant.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.services.tools.plugins import tool
+from orionix_ai.core.tools import ToolResult, ToolContext
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
 
 from tests.core.stable.services.indexing.test_evaluator import (
     AMOUNT_OF_TIME_TO_WAIT_FOR_EVALUATION_TO_START_RUNNING,

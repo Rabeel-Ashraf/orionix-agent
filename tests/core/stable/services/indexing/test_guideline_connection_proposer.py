@@ -16,13 +16,13 @@ from datetime import datetime, timezone
 from typing import Sequence
 
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.glossary import GlossaryStore
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.guideline_connection_proposer import (
+from orionix_ai.core.agents import Agent, AgentId
+from orionix_ai.core.glossary import GlossaryStore
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.services.indexing.guideline_connection_proposer import (
     GuidelineConnectionProposer,
 )
-from parlant.core.tags import Tag
+from orionix_ai.core.tags import Tag
 from tests.core.common.utils import ContextOfTest
 
 

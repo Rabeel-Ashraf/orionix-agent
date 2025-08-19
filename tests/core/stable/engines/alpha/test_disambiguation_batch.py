@@ -19,34 +19,34 @@ from typing import Sequence
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import Agent
-from parlant.core.capabilities import Capability
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.context_variables import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.capabilities import Capability
+from orionix_ai.core.common import JSONSerializable, generate_id
+from orionix_ai.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableValue,
     ContextVariableValueId,
 )
-from parlant.core.customers import Customer
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.guideline_matching.generic.disambiguation_batch import (
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.emissions import EmittedEvent
+from orionix_ai.core.engines.alpha.guideline_matching.generic.disambiguation_batch import (
     DisambiguationGuidelineMatchesSchema,
     GenericDisambiguationGuidelineMatchingBatch,
 )
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     GuidelineMatchingContext,
 )
-from parlant.core.engines.alpha.optimization_policy import OptimizationPolicy
-from parlant.core.evaluations import GuidelinePayload, PayloadOperation
-from parlant.core.glossary import Term, TermId
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.journeys import JourneyStore
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
-from parlant.core.sessions import EventSource, Session
-from parlant.core.tags import Tag, TagId
+from orionix_ai.core.engines.alpha.optimization_policy import OptimizationPolicy
+from orionix_ai.core.evaluations import GuidelinePayload, PayloadOperation
+from orionix_ai.core.glossary import Term, TermId
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
+from orionix_ai.core.sessions import EventSource, Session
+from orionix_ai.core.tags import Tag, TagId
 from tests.core.common.utils import create_event_message
 from tests.test_utilities import SyncAwaiter, nlp_test
 

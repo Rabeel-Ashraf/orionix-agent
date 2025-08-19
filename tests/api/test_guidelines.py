@@ -17,20 +17,20 @@ import httpx
 from lagom import Container
 from pytest import raises
 
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.common import ItemNotFoundError
-from parlant.core.journeys import JourneyStore
-from parlant.core.relationships import (
+from orionix_ai.core.agents import AgentId, AgentStore
+from orionix_ai.core.common import ItemNotFoundError
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.relationships import (
     RelationshipEntityKind,
     RelationshipKind,
     RelationshipEntity,
     RelationshipStore,
 )
-from parlant.core.guideline_tool_associations import GuidelineToolAssociationStore
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineStore
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tags import Tag, TagId, TagStore
-from parlant.core.tools import LocalToolService, ToolId, ToolOverlap
+from orionix_ai.core.guideline_tool_associations import GuidelineToolAssociationStore
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineStore
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.tags import Tag, TagId, TagStore
+from orionix_ai.core.tools import LocalToolService, ToolId, ToolOverlap
 
 from tests.test_utilities import (
     run_openapi_server,

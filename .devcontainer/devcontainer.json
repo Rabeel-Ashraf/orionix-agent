@@ -7,7 +7,7 @@
   // 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // 👇 Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "(cd /workspaces/parlant* && git config --global --add safe.directory $PWD && python ./scripts/initialize_repo.py)",
+  "postCreateCommand": "(cd /workspaces/orionix_ai* && git config --global --add safe.directory $PWD && python ./scripts/initialize_repo.py)",
   // 👇 Configure tool-specific properties.
   "customizations": {
     "vscode": {

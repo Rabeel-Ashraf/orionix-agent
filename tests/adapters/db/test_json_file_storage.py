@@ -22,13 +22,13 @@ import tempfile
 from lagom import Container
 from pytest import fixture, mark, raises
 
-from parlant.core.agents import AgentDocumentStore, AgentId, AgentStore
-from parlant.core.common import IdGenerator, Version
-from parlant.core.context_variables import (
+from orionix_ai.core.agents import AgentDocumentStore, AgentId, AgentStore
+from orionix_ai.core.common import IdGenerator, Version
+from orionix_ai.core.context_variables import (
     ContextVariableDocumentStore,
 )
-from parlant.core.customers import CustomerDocumentStore, CustomerId
-from parlant.core.evaluations import (
+from orionix_ai.core.customers import CustomerDocumentStore, CustomerId
+from orionix_ai.core.evaluations import (
     EvaluationDocumentStore,
     GuidelinePayload,
     PayloadOperation,
@@ -38,26 +38,26 @@ from parlant.core.evaluations import (
     PayloadDescriptor,
     PayloadKind,
 )
-from parlant.core.guidelines import (
+from orionix_ai.core.guidelines import (
     GuidelineContent,
     GuidelineDocumentStore,
     GuidelineId,
 )
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.core.persistence.common import MigrationRequired
-from parlant.core.persistence.document_database import (
+from orionix_ai.adapters.db.json_file import JSONFileDocumentDatabase
+from orionix_ai.core.persistence.common import MigrationRequired
+from orionix_ai.core.persistence.document_database import (
     BaseDocument,
     DocumentCollection,
     identity_loader,
 )
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
-from parlant.core.sessions import EventKind, EventSource, SessionDocumentStore
-from parlant.core.guideline_tool_associations import (
+from orionix_ai.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from orionix_ai.core.sessions import EventKind, EventSource, SessionDocumentStore
+from orionix_ai.core.guideline_tool_associations import (
     GuidelineToolAssociationDocumentStore,
 )
-from parlant.core.loggers import Logger
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolId
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.tags import Tag
+from orionix_ai.core.tools import ToolId
 
 from tests.test_utilities import SyncAwaiter
 

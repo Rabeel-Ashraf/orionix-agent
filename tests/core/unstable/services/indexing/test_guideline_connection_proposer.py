@@ -14,9 +14,9 @@
 
 from typing import Sequence
 
-from parlant.core.agents import Agent
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.guideline_connection_proposer import GuidelineConnectionProposer
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.services.indexing.guideline_connection_proposer import GuidelineConnectionProposer
 
 from tests.core.common.utils import ContextOfTest
 

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import parlant.sdk as p
+import orionix_ai.sdk as p
 from tests.sdk.utils import Context, SDKTest
 from tests.test_utilities import nlp_test
 

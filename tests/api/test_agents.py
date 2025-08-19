@@ -18,9 +18,9 @@ import httpx
 from lagom import Container
 from pytest import mark, raises
 
-from parlant.core.agents import AgentStore
-from parlant.core.common import ItemNotFoundError
-from parlant.core.tags import TagId, TagStore
+from orionix_ai.core.agents import AgentStore
+from orionix_ai.core.common import ItemNotFoundError
+from orionix_ai.core.tags import TagId, TagStore
 
 
 async def test_that_an_agent_can_be_created_without_description(

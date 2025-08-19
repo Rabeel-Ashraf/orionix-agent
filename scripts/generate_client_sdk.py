@@ -26,12 +26,12 @@ import time
 DIR_SCRIPT_ROOT = Path(__file__).parent
 DIR_FERN = DIR_SCRIPT_ROOT / "fern"
 DIR_SDKS = DIR_SCRIPT_ROOT / "sdks"
-DIR_PROJECTS_WORKSPACE = DIR_SCRIPT_ROOT / ".." / ".." / "parlant-sdks"
+DIR_PROJECTS_WORKSPACE = DIR_SCRIPT_ROOT / ".." / ".." / "orionix_ai-sdks"
 
 
 PATHDICT_SDK_REPO_TARGETS = {
-    "python": DIR_PROJECTS_WORKSPACE / "parlant-client-python" / "src" / "parlant" / "client",
-    "typescript": DIR_PROJECTS_WORKSPACE / "parlant-client-typescript" / "src",
+    "python": DIR_PROJECTS_WORKSPACE / "orionix_ai-client-python" / "src" / "orionix_ai" / "client",
+    "typescript": DIR_PROJECTS_WORKSPACE / "orionix_ai-client-typescript" / "src",
 }
 
 
@@ -43,7 +43,7 @@ def replace_in_files(rootdir: Path, search: str, replace: str) -> None:
 
             with open(file_path, "r") as current_file:
                 current_file_content = current_file.read()
-                if "from parlant import" not in current_file_content:
+                if "from orionix_ai import" not in current_file_content:
                     continue
 
                 current_file_content = re.sub(search, replace, current_file_content)
@@ -62,10 +62,10 @@ if __name__ == "__main__":
 
     print(f"The script will now try to fetch the latest openapi.json from http://localhost:{port}.")
     input(
-        f"Ensure that parlant-server is running on port {port} and then press any key to continue..."
+        f"Ensure that orionix_ai-server is running on port {port} and then press any key to continue..."
     )
 
-    output_openapi_json = DIR_FERN / "openapi/parlant.openapi.json"
+    output_openapi_json = DIR_FERN / "openapi/orionix_ai.openapi.json"
     output_openapi_json.parent.mkdir(exist_ok=True)
     output_openapi_json.touch()
 
@@ -107,8 +107,8 @@ if __name__ == "__main__":
     if exit_code != os.EX_OK:
         raise Exception(generate_output)
 
-    print("Renaming `parlant` to `parlant.client` in python imports")
-    replace_in_files(DIR_SDKS / "python", "from parlant import", "from parlant.client import")
+    print("Renaming `orionix_ai` to `orionix_ai.client` in python imports")
+    replace_in_files(DIR_SDKS / "python", "from orionix_ai import", "from orionix_ai.client import")
 
     print("touching python typing")
 

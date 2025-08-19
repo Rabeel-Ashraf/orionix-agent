@@ -23,78 +23,78 @@ from lagom import Container, Singleton
 from pytest import fixture, Config
 import pytest
 
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.adapters.loggers.websocket import WebSocketLogger
-from parlant.adapters.nlp.openai_service import OpenAIService
-from parlant.adapters.vector_db.transient import TransientVectorDatabase
-from parlant.api.app import create_api_app, ASGIApplication
-from parlant.api.authorization import AuthorizationPolicy, DevelopmentAuthorizationPolicy
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.capabilities import CapabilityStore, CapabilityVectorStore
-from parlant.core.common import IdGenerator
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.context_variables import ContextVariableDocumentStore, ContextVariableStore
-from parlant.core.emission.event_publisher import EventPublisherFactory
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.customers import CustomerDocumentStore, CustomerStore
-from parlant.core.engines.alpha.guideline_matching.generic import (
+from orionix_ai.adapters.db.json_file import JSONFileDocumentDatabase
+from orionix_ai.adapters.loggers.websocket import WebSocketLogger
+from orionix_ai.adapters.nlp.openai_service import OpenAIService
+from orionix_ai.adapters.vector_db.transient import TransientVectorDatabase
+from orionix_ai.api.app import create_api_app, ASGIApplication
+from orionix_ai.api.authorization import AuthorizationPolicy, DevelopmentAuthorizationPolicy
+from orionix_ai.core.background_tasks import BackgroundTaskService
+from orionix_ai.core.capabilities import CapabilityStore, CapabilityVectorStore
+from orionix_ai.core.common import IdGenerator
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.context_variables import ContextVariableDocumentStore, ContextVariableStore
+from orionix_ai.core.emission.event_publisher import EventPublisherFactory
+from orionix_ai.core.emissions import EventEmitterFactory
+from orionix_ai.core.customers import CustomerDocumentStore, CustomerStore
+from orionix_ai.core.engines.alpha.guideline_matching.generic import (
     observational_batch,
 )
-from parlant.core.engines.alpha.guideline_matching.generic import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic import (
     guideline_previously_applied_actionable_batch,
 )
-from parlant.core.engines.alpha.guideline_matching.generic import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic import (
     guideline_actionable_batch,
 )
-from parlant.core.engines.alpha.guideline_matching.generic import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic import (
     guideline_previously_applied_actionable_customer_dependent_batch,
 )
-from parlant.core.engines.alpha.guideline_matching.generic import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic import (
     response_analysis_batch,
 )
-from parlant.core.engines.alpha.guideline_matching.generic.disambiguation_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.disambiguation_batch import (
     DisambiguationGuidelineMatchesSchema,
 )
-from parlant.core.engines.alpha.guideline_matching.generic.journey_node_selection_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.journey_node_selection_batch import (
     JourneyNodeSelectionSchema,
 )
-from parlant.core.engines.alpha.guideline_matching.generic_guideline_matching_strategy_resolver import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic_guideline_matching_strategy_resolver import (
     GenericGuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.optimization_policy import (
+from orionix_ai.core.engines.alpha.optimization_policy import (
     BasicOptimizationPolicy,
     OptimizationPolicy,
 )
-from parlant.core.engines.alpha.perceived_performance_policy import (
+from orionix_ai.core.engines.alpha.perceived_performance_policy import (
     NullPerceivedPerformancePolicy,
     PerceivedPerformancePolicy,
 )
-from parlant.core.engines.alpha.guideline_matching.generic.guideline_previously_applied_actionable_customer_dependent_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.guideline_previously_applied_actionable_customer_dependent_batch import (
     GenericPreviouslyAppliedActionableCustomerDependentGuidelineMatchesSchema,
     GenericPreviouslyAppliedActionableCustomerDependentGuidelineMatching,
     GenericPreviouslyAppliedActionableCustomerDependentGuidelineMatchingShot,
 )
-from parlant.core.engines.alpha.guideline_matching.generic.guideline_actionable_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.guideline_actionable_batch import (
     GenericActionableGuidelineMatchesSchema,
     GenericActionableGuidelineMatching,
     GenericActionableGuidelineGuidelineMatchingShot,
 )
-from parlant.core.engines.alpha.guideline_matching.generic.guideline_previously_applied_actionable_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.guideline_previously_applied_actionable_batch import (
     GenericPreviouslyAppliedActionableGuidelineMatchesSchema,
     GenericPreviouslyAppliedActionableGuidelineMatching,
     GenericPreviouslyAppliedActionableGuidelineGuidelineMatchingShot,
 )
-from parlant.core.engines.alpha.tool_calling import overlapping_tools_batch, single_tool_batch
-from parlant.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
+from orionix_ai.core.engines.alpha.tool_calling import overlapping_tools_batch, single_tool_batch
+from orionix_ai.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
     GenericResponseAnalysisBatch,
     GenericResponseAnalysisSchema,
     GenericResponseAnalysisShot,
 )
-from parlant.core.engines.alpha import message_generator
-from parlant.core.engines.alpha.hooks import EngineHooks
-from parlant.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
-from parlant.core.engines.alpha.tool_calling.default_tool_call_batcher import DefaultToolCallBatcher
-from parlant.core.engines.alpha.canned_response_generator import (
+from orionix_ai.core.engines.alpha import message_generator
+from orionix_ai.core.engines.alpha.hooks import EngineHooks
+from orionix_ai.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
+from orionix_ai.core.engines.alpha.tool_calling.default_tool_call_batcher import DefaultToolCallBatcher
+from orionix_ai.core.engines.alpha.canned_response_generator import (
     CannedResponseDraftSchema,
     CannedResponseFieldExtractionSchema,
     CannedResponseFieldExtractor,
@@ -105,114 +105,114 @@ from parlant.core.engines.alpha.canned_response_generator import (
     BasicNoMatchResponseProvider,
     NoMatchResponseProvider,
 )
-from parlant.core.evaluations import (
+from orionix_ai.core.evaluations import (
     EvaluationListener,
     PollingEvaluationListener,
     EvaluationDocumentStore,
     EvaluationStore,
 )
-from parlant.core.journey_guideline_projection import JourneyGuidelineProjection
-from parlant.core.journeys import JourneyStore, JourneyVectorStore
-from parlant.core.services.indexing.customer_dependent_action_detector import (
+from orionix_ai.core.journey_guideline_projection import JourneyGuidelineProjection
+from orionix_ai.core.journeys import JourneyStore, JourneyVectorStore
+from orionix_ai.core.services.indexing.customer_dependent_action_detector import (
     CustomerDependentActionDetector,
     CustomerDependentActionSchema,
 )
-from parlant.core.services.indexing.guideline_action_proposer import (
+from orionix_ai.core.services.indexing.guideline_action_proposer import (
     GuidelineActionProposer,
     GuidelineActionPropositionSchema,
 )
-from parlant.core.services.indexing.guideline_agent_intention_proposer import (
+from orionix_ai.core.services.indexing.guideline_agent_intention_proposer import (
     AgentIntentionProposer,
     AgentIntentionProposerSchema,
 )
-from parlant.core.services.indexing.guideline_continuous_proposer import (
+from orionix_ai.core.services.indexing.guideline_continuous_proposer import (
     GuidelineContinuousProposer,
     GuidelineContinuousPropositionSchema,
 )
-from parlant.core.services.indexing.relative_action_proposer import (
+from orionix_ai.core.services.indexing.relative_action_proposer import (
     RelativeActionProposer,
     RelativeActionSchema,
 )
-from parlant.core.services.indexing.tool_running_action_detector import (
+from orionix_ai.core.services.indexing.tool_running_action_detector import (
     ToolRunningActionDetector,
     ToolRunningActionSchema,
 )
-from parlant.core.canned_responses import CannedResponseStore, CannedResponseVectorStore
-from parlant.core.nlp.embedding import (
+from orionix_ai.core.canned_responses import CannedResponseStore, CannedResponseVectorStore
+from orionix_ai.core.nlp.embedding import (
     BasicEmbeddingCache,
     Embedder,
     EmbedderFactory,
     EmbeddingCache,
     NullEmbeddingCache,
 )
-from parlant.core.nlp.generation import T, SchematicGenerator
-from parlant.core.relationships import (
+from orionix_ai.core.nlp.generation import T, SchematicGenerator
+from orionix_ai.core.relationships import (
     RelationshipDocumentStore,
     RelationshipStore,
 )
-from parlant.core.guidelines import GuidelineDocumentStore, GuidelineStore
-from parlant.adapters.db.transient import TransientDocumentDatabase
-from parlant.core.nlp.service import NLPService
-from parlant.core.persistence.data_collection import DataCollectingSchematicGenerator
-from parlant.core.persistence.document_database import DocumentCollection
-from parlant.core.services.tools.service_registry import (
+from orionix_ai.core.guidelines import GuidelineDocumentStore, GuidelineStore
+from orionix_ai.adapters.db.transient import TransientDocumentDatabase
+from orionix_ai.core.nlp.service import NLPService
+from orionix_ai.core.persistence.data_collection import DataCollectingSchematicGenerator
+from orionix_ai.core.persistence.document_database import DocumentCollection
+from orionix_ai.core.services.tools.service_registry import (
     ServiceDocumentRegistry,
     ServiceRegistry,
 )
-from parlant.core.sessions import (
+from orionix_ai.core.sessions import (
     PollingSessionListener,
     SessionDocumentStore,
     SessionListener,
     SessionStore,
 )
-from parlant.core.engines.alpha.engine import AlphaEngine
-from parlant.core.glossary import GlossaryStore, GlossaryVectorStore
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.engine import AlphaEngine
+from orionix_ai.core.glossary import GlossaryStore, GlossaryVectorStore
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     GuidelineMatcher,
     GuidelineMatchingStrategyResolver,
     ResponseAnalysisBatch,
 )
 
-from parlant.core.engines.alpha.guideline_matching.generic.observational_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.observational_batch import (
     GenericObservationalGuidelineMatchesSchema,
     GenericObservationalGuidelineMatchingShot,
     ObservationalGuidelineMatching,
 )
-from parlant.core.engines.alpha.message_generator import (
+from orionix_ai.core.engines.alpha.message_generator import (
     MessageGenerator,
     MessageGeneratorShot,
     MessageSchema,
 )
-from parlant.core.engines.alpha.tool_calling.tool_caller import (
+from orionix_ai.core.engines.alpha.tool_calling.tool_caller import (
     ToolCallBatcher,
     ToolCaller,
 )
-from parlant.core.engines.alpha.tool_event_generator import ToolEventGenerator
-from parlant.core.engines.types import Engine
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from orionix_ai.core.engines.alpha.tool_event_generator import ToolEventGenerator
+from orionix_ai.core.engines.types import Engine
+from orionix_ai.core.services.indexing.behavioral_change_evaluation import (
     GuidelineEvaluator,
     LegacyBehavioralChangeEvaluator,
 )
-from parlant.core.services.indexing.coherence_checker import (
+from orionix_ai.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     ConditionsEntailmentTestsSchema,
     ActionsContradictionTestsSchema,
 )
-from parlant.core.services.indexing.guideline_connection_proposer import (
+from orionix_ai.core.services.indexing.guideline_connection_proposer import (
     GuidelineConnectionProposer,
     GuidelineConnectionPropositionsSchema,
 )
-from parlant.core.loggers import LogLevel, Logger, StdoutLogger
-from parlant.core.application import Application
-from parlant.core.agents import AgentDocumentStore, AgentStore
-from parlant.core.guideline_tool_associations import (
+from orionix_ai.core.loggers import LogLevel, Logger, StdoutLogger
+from orionix_ai.core.application import Application
+from orionix_ai.core.agents import AgentDocumentStore, AgentStore
+from orionix_ai.core.guideline_tool_associations import (
     GuidelineToolAssociationDocumentStore,
     GuidelineToolAssociationStore,
 )
-from parlant.core.shots import ShotCollection
-from parlant.core.entity_cq import EntityQueries, EntityCommands
-from parlant.core.tags import TagDocumentStore, TagStore
-from parlant.core.tools import LocalToolService
+from orionix_ai.core.shots import ShotCollection
+from orionix_ai.core.entity_cq import EntityQueries, EntityCommands
+from orionix_ai.core.tags import TagDocumentStore, TagStore
+from orionix_ai.core.tools import LocalToolService
 
 from .test_utilities import (
     GLOBAL_EMBEDDER_CACHE_FILE,

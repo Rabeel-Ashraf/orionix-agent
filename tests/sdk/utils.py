@@ -17,12 +17,12 @@ from dataclasses import dataclass
 import time
 from typing import Callable, cast
 
-from parlant.client import AsyncParlantClient as Client
-from parlant.client.types.event import Event as ClientEvent
+from orionix_ai.client import AsyncParlantClient as Client
+from orionix_ai.client.types.event import Event as ClientEvent
 
-import parlant.sdk as p
+import orionix_ai.sdk as p
 
-from parlant.core.engines.alpha.perceived_performance_policy import (
+from orionix_ai.core.engines.alpha.perceived_performance_policy import (
     NullPerceivedPerformancePolicy,
     PerceivedPerformancePolicy,
 )

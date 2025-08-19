@@ -1,10 +1,10 @@
 from typing import cast
 from lagom import Container
 
-from parlant.core.common import JSONSerializable
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.journey_guideline_projection import JourneyGuidelineProjection
-from parlant.core.journeys import JourneyStore
+from orionix_ai.core.common import JSONSerializable
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.journey_guideline_projection import JourneyGuidelineProjection
+from orionix_ai.core.journeys import JourneyStore
 
 
 async def test_that_projection_yields_followup_for_existing_guideline(container: Container) -> None:

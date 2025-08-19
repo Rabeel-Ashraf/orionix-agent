@@ -18,9 +18,9 @@ import httpx
 from lagom import Container
 from pytest import raises
 
-from parlant.core.common import ItemNotFoundError
-from parlant.core.canned_responses import CannedResponseStore, CannedResponseField
-from parlant.core.tags import TagStore
+from orionix_ai.core.common import ItemNotFoundError
+from orionix_ai.core.canned_responses import CannedResponseStore, CannedResponseField
+from orionix_ai.core.tags import TagStore
 
 
 async def test_that_a_canned_response_can_be_created(

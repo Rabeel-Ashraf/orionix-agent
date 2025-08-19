@@ -18,8 +18,8 @@ from typing import Sequence, cast
 from lagom import Container
 from pytest import raises
 
-from parlant.core.agents import Agent
-from parlant.core.evaluations import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.evaluations import (
     CoherenceCheck,
     EntailmentRelationshipPropositionKind,
     EvaluationListener,
@@ -31,12 +31,12 @@ from parlant.core.evaluations import (
     PayloadDescriptor,
     PayloadKind,
 )
-from parlant.core.guidelines import GuidelineContent, GuidelineStore
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from orionix_ai.core.guidelines import GuidelineContent, GuidelineStore
+from orionix_ai.core.services.indexing.behavioral_change_evaluation import (
     LegacyBehavioralChangeEvaluator,
     EvaluationValidationError,
 )
-from parlant.core.tags import Tag
+from orionix_ai.core.tags import Tag
 from tests.conftest import NoCachedGenerations
 
 AMOUNT_OF_TIME_TO_WAIT_FOR_EVALUATION_TO_START_RUNNING = 0.3

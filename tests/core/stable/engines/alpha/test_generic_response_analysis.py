@@ -19,25 +19,25 @@ from typing import Mapping, Sequence
 
 from lagom import Container
 from pytest import fixture
-from parlant.core.agents import Agent
-from parlant.core.common import generate_id
-from parlant.core.customers import Customer
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.common import generate_id
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.emissions import EmittedEvent
+from orionix_ai.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
     GenericResponseAnalysisSchema,
     GenericResponseAnalysisBatch,
 )
-from parlant.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     ResponseAnalysisContext,
 )
-from parlant.core.engines.alpha.optimization_policy import OptimizationPolicy
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.sessions import EventSource, Session, SessionId, SessionStore
-from parlant.core.tags import TagId
-from parlant.core.tools import ToolId
+from orionix_ai.core.engines.alpha.optimization_policy import OptimizationPolicy
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.sessions import EventSource, Session, SessionId, SessionStore
+from orionix_ai.core.tags import TagId
+from orionix_ai.core.tools import ToolId
 from tests.core.common.utils import create_event_message
 from tests.test_utilities import SyncAwaiter
 

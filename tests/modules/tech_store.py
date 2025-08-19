@@ -15,10 +15,10 @@
 import httpx
 from lagom import Container
 
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.services.tools.plugins import PluginServer, tool
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tools import ToolContext, ToolResult
+from orionix_ai.core.background_tasks import BackgroundTaskService
+from orionix_ai.core.services.tools.plugins import PluginServer, tool
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.tools import ToolContext, ToolResult
 
 
 server_instance: PluginServer | None = None

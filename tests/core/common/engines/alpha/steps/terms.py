@@ -14,9 +14,9 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.glossary import GlossaryStore
-from parlant.core.tags import Tag
+from orionix_ai.core.agents import AgentId, AgentStore
+from orionix_ai.core.glossary import GlossaryStore
+from orionix_ai.core.tags import Tag
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

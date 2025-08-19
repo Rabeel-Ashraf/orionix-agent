@@ -23,11 +23,11 @@ from pytest import fixture
 from typing_extensions import override
 from ast import literal_eval
 
-from parlant.core.agents import Agent
-from parlant.core.common import generate_id
-from parlant.core.customers import Customer, CustomerStore, CustomerId
-from parlant.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.tool_calling.tool_caller import (
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.common import generate_id
+from orionix_ai.core.customers import Customer, CustomerStore, CustomerId
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
+from orionix_ai.core.engines.alpha.tool_calling.tool_caller import (
     ToolCall,
     ToolCallBatch,
     ToolCallBatchResult,
@@ -38,19 +38,19 @@ from parlant.core.engines.alpha.tool_calling.tool_caller import (
     ToolCaller,
     ToolInsights,
 )
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineContent
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.relationships import (
+from orionix_ai.core.guidelines import Guideline, GuidelineId, GuidelineContent
+from orionix_ai.core.nlp.generation_info import GenerationInfo, UsageInfo
+from orionix_ai.core.relationships import (
     RelationshipEntityKind,
     RelationshipEntity,
     RelationshipStore,
     RelationshipKind,
 )
-from parlant.core.services.tools.plugins import tool
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.sessions import Event, EventSource, SessionId, SessionStore
-from parlant.core.tags import TagId, Tag
-from parlant.core.tools import (
+from orionix_ai.core.services.tools.plugins import tool
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.sessions import Event, EventSource, SessionId, SessionStore
+from orionix_ai.core.tags import TagId, Tag
+from orionix_ai.core.tools import (
     LocalToolService,
     Tool,
     ToolContext,
@@ -62,7 +62,7 @@ from parlant.core.tools import (
 
 from tests.core.common.utils import create_event_message
 from tests.test_utilities import run_service_server, get_random_port
-from parlant.core.services.tools.mcp_service import MCPToolServer
+from orionix_ai.core.services.tools.mcp_service import MCPToolServer
 
 
 @fixture

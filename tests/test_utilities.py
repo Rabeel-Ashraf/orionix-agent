@@ -45,36 +45,36 @@ import httpx
 from lagom import Container
 import uvicorn
 
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.adapters.nlp.openai_service import GPT_4o
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.application import Application
-from parlant.core.async_utils import Timeout
-from parlant.core.common import DefaultBaseModel, JSONSerializable, Version
-from parlant.core.context_variables import (
+from orionix_ai.adapters.db.json_file import JSONFileDocumentDatabase
+from orionix_ai.adapters.nlp.openai_service import GPT_4o
+from orionix_ai.core.agents import Agent, AgentId, AgentStore
+from orionix_ai.core.application import Application
+from orionix_ai.core.async_utils import Timeout
+from orionix_ai.core.common import DefaultBaseModel, JSONSerializable, Version
+from orionix_ai.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableStore,
     ContextVariableValue,
 )
-from parlant.core.customers import Customer, CustomerId, CustomerStore
-from parlant.core.engines.alpha.hooks import EngineHook, EngineHooks
-from parlant.core.engines.alpha.loaded_context import LoadedContext
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.glossary import GlossaryStore, Term
-from parlant.core.guideline_tool_associations import GuidelineToolAssociationStore
-from parlant.core.guidelines import Guideline, GuidelineStore
-from parlant.core.loggers import LogLevel, Logger
-from parlant.core.nlp.generation import (
+from orionix_ai.core.customers import Customer, CustomerId, CustomerStore
+from orionix_ai.core.engines.alpha.hooks import EngineHook, EngineHooks
+from orionix_ai.core.engines.alpha.loaded_context import LoadedContext
+from orionix_ai.core.engines.alpha.prompt_builder import PromptBuilder
+from orionix_ai.core.glossary import GlossaryStore, Term
+from orionix_ai.core.guideline_tool_associations import GuidelineToolAssociationStore
+from orionix_ai.core.guidelines import Guideline, GuidelineStore
+from orionix_ai.core.loggers import LogLevel, Logger
+from orionix_ai.core.nlp.generation import (
     FallbackSchematicGenerator,
     SchematicGenerationResult,
     SchematicGenerator,
 )
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.nlp.tokenization import EstimatingTokenizer
-from parlant.core.services.tools.mcp_service import MCPToolServer
-from parlant.core.services.tools.plugins import PluginServer, ToolEntry
-from parlant.core.sessions import (
+from orionix_ai.core.nlp.generation_info import GenerationInfo, UsageInfo
+from orionix_ai.core.nlp.tokenization import EstimatingTokenizer
+from orionix_ai.core.services.tools.mcp_service import MCPToolServer
+from orionix_ai.core.services.tools.plugins import PluginServer, ToolEntry
+from orionix_ai.core.sessions import (
     _GenerationInfoDocument,
     _UsageInfoDocument,
     Event,
@@ -85,10 +85,10 @@ from parlant.core.sessions import (
     EventSource,
     EventKind,
 )
-from parlant.core.tags import Tag, TagId
-from parlant.core.tools import LocalToolService, ToolId, ToolResult
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import BaseDocument, DocumentCollection
+from orionix_ai.core.tags import Tag, TagId
+from orionix_ai.core.tools import LocalToolService, ToolId, ToolResult
+from orionix_ai.core.persistence.common import ObjectId
+from orionix_ai.core.persistence.document_database import BaseDocument, DocumentCollection
 
 T = TypeVar("T")
 GLOBAL_SCHEMATIC_GENERATION_CACHE_FILE = Path("schematic_generation_test_cache.json")

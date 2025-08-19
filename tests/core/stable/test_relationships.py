@@ -15,8 +15,8 @@
 from typing import AsyncIterator, Sequence
 from pytest import fixture
 
-from parlant.core.common import IdGenerator
-from parlant.core.relationships import (
+from orionix_ai.core.common import IdGenerator
+from orionix_ai.core.relationships import (
     RelationshipEntityKind,
     RelationshipKind,
     Relationship,
@@ -24,9 +24,9 @@ from parlant.core.relationships import (
     RelationshipEntity,
     RelationshipStore,
 )
-from parlant.core.guidelines import GuidelineId
-from parlant.core.persistence.document_database import DocumentDatabase
-from parlant.adapters.db.transient import TransientDocumentDatabase
+from orionix_ai.core.guidelines import GuidelineId
+from orionix_ai.core.persistence.document_database import DocumentDatabase
+from orionix_ai.adapters.db.transient import TransientDocumentDatabase
 
 
 @fixture

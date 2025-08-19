@@ -17,11 +17,11 @@ from fastapi import status
 from lagom import Container
 from pytest import mark, raises
 
-from parlant.core.agents import AgentStore
-from parlant.core.capabilities import CapabilityStore
-from parlant.core.journeys import JourneyStore
-from parlant.core.tags import Tag, TagStore
-from parlant.core.common import ItemNotFoundError
+from orionix_ai.core.agents import AgentStore
+from orionix_ai.core.capabilities import CapabilityStore
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.tags import Tag, TagStore
+from orionix_ai.core.common import ItemNotFoundError
 
 
 async def test_that_a_capability_can_be_created(

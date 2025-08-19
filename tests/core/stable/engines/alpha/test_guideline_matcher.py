@@ -22,27 +22,27 @@ from lagom import Container
 from more_itertools import unique
 from pytest import fixture, raises
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.capabilities import Capability, CapabilityId
-from parlant.core.common import generate_id, JSONSerializable
-from parlant.core.context_variables import (
+from orionix_ai.core.agents import Agent, AgentId
+from orionix_ai.core.capabilities import Capability, CapabilityId
+from orionix_ai.core.common import generate_id, JSONSerializable
+from orionix_ai.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableValue,
     ContextVariableValueId,
 )
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.customers import Customer
-from parlant.core.emission.event_buffer import EventBuffer
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.guideline_matching.generic_guideline_matching_strategy_resolver import (
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.emission.event_buffer import EventBuffer
+from orionix_ai.core.emissions import EmittedEvent
+from orionix_ai.core.engines.alpha.guideline_matching.generic_guideline_matching_strategy_resolver import (
     GenericGuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
+from orionix_ai.core.engines.alpha.guideline_matching.generic.response_analysis_batch import (
     GenericResponseAnalysisBatch,
     GenericResponseAnalysisSchema,
 )
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import (
     GuidelineMatcher,
     GuidelineMatchingBatch,
     GuidelineMatchingBatchResult,
@@ -53,30 +53,30 @@ from parlant.core.engines.alpha.guideline_matching.guideline_matcher import (
     GuidelineMatchingStrategy,
     GuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
-from parlant.core.engines.alpha.optimization_policy import OptimizationPolicy
-from parlant.core.engines.alpha.tool_calling.tool_caller import ToolInsights
-from parlant.core.engines.types import Context
-from parlant.core.entity_cq import EntityCommands
-from parlant.core.evaluations import GuidelinePayload, PayloadOperation
-from parlant.core.glossary import Term
-from parlant.core.journeys import Journey
-from parlant.core.nlp.generation import SchematicGenerator
+from orionix_ai.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
+from orionix_ai.core.engines.alpha.optimization_policy import OptimizationPolicy
+from orionix_ai.core.engines.alpha.tool_calling.tool_caller import ToolInsights
+from orionix_ai.core.engines.types import Context
+from orionix_ai.core.entity_cq import EntityCommands
+from orionix_ai.core.evaluations import GuidelinePayload, PayloadOperation
+from orionix_ai.core.glossary import Term
+from orionix_ai.core.journeys import Journey
+from orionix_ai.core.nlp.generation import SchematicGenerator
 
-from parlant.core.engines.alpha.guideline_matching.guideline_match import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import (
     GuidelineMatch,
     AnalyzedGuideline,
 )
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.relationships import (
+from orionix_ai.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from orionix_ai.core.nlp.generation_info import GenerationInfo, UsageInfo
+from orionix_ai.core.relationships import (
     RelationshipKind,
     RelationshipEntity,
     RelationshipEntityKind,
     RelationshipStore,
 )
-from parlant.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
-from parlant.core.sessions import (
+from orionix_ai.core.services.indexing.behavioral_change_evaluation import GuidelineEvaluator
+from orionix_ai.core.sessions import (
     AgentState,
     Event,
     EventKind,
@@ -86,10 +86,10 @@ from parlant.core.sessions import (
     SessionStore,
     SessionUpdateParams,
 )
-from parlant.core.loggers import Logger
-from parlant.core.glossary import TermId
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.glossary import TermId
 
-from parlant.core.tags import TagId, Tag
+from orionix_ai.core.tags import TagId, Tag
 from tests.core.common.utils import create_event_message
 from tests.test_utilities import SyncAwaiter
 

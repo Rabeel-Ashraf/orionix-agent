@@ -16,9 +16,9 @@ from typing import Optional
 from lagom import Container
 from enum import Enum
 
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.services.tools.mcp_service import MCPToolServer, DEFAULT_MCP_PORT
-from parlant.core.services.tools.service_registry import ServiceRegistry
+from orionix_ai.core.background_tasks import BackgroundTaskService
+from orionix_ai.core.services.tools.mcp_service import MCPToolServer, DEFAULT_MCP_PORT
+from orionix_ai.core.services.tools.service_registry import ServiceRegistry
 
 server_instance: MCPToolServer | None = None
 

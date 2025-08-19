@@ -14,18 +14,18 @@
 
 from lagom import Container
 
-from parlant.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
-from parlant.core.journey_guideline_projection import JourneyGuidelineProjection
-from parlant.core.journeys import JourneyStore
-from parlant.core.relationships import (
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_match import GuidelineMatch
+from orionix_ai.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
+from orionix_ai.core.journey_guideline_projection import JourneyGuidelineProjection
+from orionix_ai.core.journeys import JourneyStore
+from orionix_ai.core.relationships import (
     RelationshipEntityKind,
     RelationshipKind,
     RelationshipEntity,
     RelationshipStore,
 )
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.tags import TagStore, Tag
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.tags import TagStore, Tag
 
 
 async def test_that_relational_guideline_resolver_prioritizes_indirectly_between_guidelines(

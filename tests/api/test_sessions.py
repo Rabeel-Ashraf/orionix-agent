@@ -23,13 +23,13 @@ from lagom import Container
 from pytest import fixture, mark
 from datetime import datetime, timezone
 
-from parlant.core.common import generate_id
-from parlant.core.canned_responses import CannedResponseStore
-from parlant.core.tools import ToolResult
-from parlant.core.agents import AgentId, AgentStore, AgentUpdateParams, CompositionMode
-from parlant.core.async_utils import Timeout
-from parlant.core.customers import CustomerId
-from parlant.core.sessions import (
+from orionix_ai.core.common import generate_id
+from orionix_ai.core.canned_responses import CannedResponseStore
+from orionix_ai.core.tools import ToolResult
+from orionix_ai.core.agents import AgentId, AgentStore, AgentUpdateParams, CompositionMode
+from orionix_ai.core.async_utils import Timeout
+from orionix_ai.core.customers import CustomerId
+from orionix_ai.core.sessions import (
     AgentState,
     EventKind,
     EventSource,

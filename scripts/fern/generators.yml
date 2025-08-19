@@ -1,6 +1,6 @@
 api:
   specs:
-    - openapi: openapi/parlant.openapi.json
+    - openapi: openapi/orionix_ai.openapi.json
 default-group: local
 groups:
   local:

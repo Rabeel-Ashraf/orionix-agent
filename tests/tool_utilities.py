@@ -19,7 +19,7 @@ import json
 from typing import Optional
 
 
-from parlant.core.tools import ToolResult
+from orionix_ai.core.tools import ToolResult
 
 
 class Categories(Enum):

@@ -17,19 +17,19 @@ from typing import Any
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import Agent
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.customers import Customer
-from parlant.core.emission.event_buffer import EventBuffer
-from parlant.core.engines.alpha.guideline_matching.guideline_matcher import GuidelineMatcher
-from parlant.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
-from parlant.core.engines.alpha.tool_calling.tool_caller import ToolInsights
-from parlant.core.engines.types import Context
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.loggers import Logger
-from parlant.core.services.indexing.guideline_action_proposer import GuidelineActionProposer
-from parlant.core.sessions import EventSource, Session, SessionId, SessionStore
-from parlant.core.tools import LocalToolService, Tool, ToolId
+from orionix_ai.core.agents import Agent
+from orionix_ai.core.contextual_correlator import ContextualCorrelator
+from orionix_ai.core.customers import Customer
+from orionix_ai.core.emission.event_buffer import EventBuffer
+from orionix_ai.core.engines.alpha.guideline_matching.guideline_matcher import GuidelineMatcher
+from orionix_ai.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
+from orionix_ai.core.engines.alpha.tool_calling.tool_caller import ToolInsights
+from orionix_ai.core.engines.types import Context
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.services.indexing.guideline_action_proposer import GuidelineActionProposer
+from orionix_ai.core.sessions import EventSource, Session, SessionId, SessionStore
+from orionix_ai.core.tools import LocalToolService, Tool, ToolId
 from tests.core.common.engines.alpha.steps.tools import TOOLS
 from tests.core.common.utils import create_event_message
 from tests.core.stable.engines.alpha.test_guideline_matcher import (

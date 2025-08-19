@@ -21,18 +21,18 @@ from typing_extensions import Required
 from lagom import Container
 from pytest import fixture, raises
 
-from parlant.adapters.nlp.openai_service import OpenAITextEmbedding3Large
-from parlant.adapters.db.transient import TransientDocumentDatabase
-from parlant.adapters.vector_db.chroma import ChromaCollection, ChromaDatabase
-from parlant.core.agents import AgentStore, AgentId
-from parlant.core.common import IdGenerator, Version, md5_checksum
-from parlant.core.glossary import GlossaryVectorStore
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory, NoOpEmbedder, NullEmbeddingCache
-from parlant.core.loggers import Logger
-from parlant.core.nlp.service import NLPService
-from parlant.core.persistence.common import MigrationRequired, ObjectId
-from parlant.core.persistence.vector_database import BaseDocument
-from parlant.core.tags import Tag, TagId
+from orionix_ai.adapters.nlp.openai_service import OpenAITextEmbedding3Large
+from orionix_ai.adapters.db.transient import TransientDocumentDatabase
+from orionix_ai.adapters.vector_db.chroma import ChromaCollection, ChromaDatabase
+from orionix_ai.core.agents import AgentStore, AgentId
+from orionix_ai.core.common import IdGenerator, Version, md5_checksum
+from orionix_ai.core.glossary import GlossaryVectorStore
+from orionix_ai.core.nlp.embedding import Embedder, EmbedderFactory, NoOpEmbedder, NullEmbeddingCache
+from orionix_ai.core.loggers import Logger
+from orionix_ai.core.nlp.service import NLPService
+from orionix_ai.core.persistence.common import MigrationRequired, ObjectId
+from orionix_ai.core.persistence.vector_database import BaseDocument
+from orionix_ai.core.tags import Tag, TagId
 from tests.test_utilities import SyncAwaiter
 
 

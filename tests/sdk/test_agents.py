@@ -13,14 +13,14 @@
 # limitations under the License.
 
 from typing import Any
-from parlant.core.capabilities import CapabilityStore
-from parlant.core.guideline_tool_associations import GuidelineToolAssociationStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.services.tools.plugins import tool
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolContext, ToolResult
-from parlant.core.canned_responses import CannedResponseStore
-import parlant.sdk as p
+from orionix_ai.core.capabilities import CapabilityStore
+from orionix_ai.core.guideline_tool_associations import GuidelineToolAssociationStore
+from orionix_ai.core.guidelines import GuidelineStore
+from orionix_ai.core.services.tools.plugins import tool
+from orionix_ai.core.tags import Tag
+from orionix_ai.core.tools import ToolContext, ToolResult
+from orionix_ai.core.canned_responses import CannedResponseStore
+import orionix_ai.sdk as p
 
 from tests.sdk.utils import Context, SDKTest
 from tests.test_utilities import nlp_test

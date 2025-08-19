@@ -16,9 +16,9 @@ from datetime import datetime, timezone
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.customers import Customer, CustomerId, CustomerStore
-from parlant.core.sessions import Session, SessionStore
+from orionix_ai.core.agents import Agent, AgentId, AgentStore
+from orionix_ai.core.customers import Customer, CustomerId, CustomerStore
+from orionix_ai.core.sessions import Session, SessionStore
 
 from tests.core.common.utils import ContextOfTest
 from tests.test_utilities import SyncAwaiter

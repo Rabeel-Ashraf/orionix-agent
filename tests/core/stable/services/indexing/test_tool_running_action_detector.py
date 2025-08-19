@@ -1,9 +1,9 @@
 from typing import Any, Sequence
 
 from lagom import Container
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.tool_running_action_detector import ToolRunningActionDetector
-from parlant.core.tools import LocalToolService, ToolId
+from orionix_ai.core.guidelines import GuidelineContent
+from orionix_ai.core.services.indexing.tool_running_action_detector import ToolRunningActionDetector
+from orionix_ai.core.tools import LocalToolService, ToolId
 
 
 async def base_test_tool_running_action_detector(
